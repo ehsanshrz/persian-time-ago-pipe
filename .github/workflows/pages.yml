@@ -32,6 +32,8 @@ jobs:
         run: npm ci
 
       - name: Build example app
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
         run: npm run build -- --configuration production --base-href /persian-time-ago-pipe/
 
       - name: Setup Pages
