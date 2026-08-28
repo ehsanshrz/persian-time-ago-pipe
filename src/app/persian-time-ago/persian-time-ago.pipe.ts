@@ -6,7 +6,7 @@ import { Pipe, PipeTransform, NgZone, ChangeDetectorRef, OnDestroy } from '@angu
 export class PersianTimeAgoPipe implements PipeTransform, OnDestroy {
     private timer: number | null;
     constructor(private changeDetectorRef: ChangeDetectorRef, private ngZone: NgZone) { }
-    transform(value: string) {
+    transform(value: string): string {
         this.removeTimer();
         const d = new Date(value);
         const now = new Date();
@@ -54,13 +54,13 @@ export class PersianTimeAgoPipe implements PipeTransform, OnDestroy {
     ngOnDestroy(): void {
         this.removeTimer();
     }
-    private removeTimer() {
+    private removeTimer(): void {
         if (this.timer) {
             window.clearTimeout(this.timer);
             this.timer = null;
         }
     }
-    private getSecondsUntilUpdate(seconds: number) {
+    private getSecondsUntilUpdate(seconds: number): number {
         const min = 60;
         const hr = min * 60;
         const day = hr * 24;

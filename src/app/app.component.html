@@ -1,0 +1,19 @@
+<main class="container">
+  <h1>Persian Time Ago Pipe Examples</h1>
+  <p>Examples below are rendered using <code>persianTimeAgo</code>.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Input</th>
+        <th>Output</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let example of examples">
+        <td>{{ example.label }}</td>
+        <td>{{ example.value | persianTimeAgo }}</td>
+      </tr>
+    </tbody>
+  </table>
+</main>

@@ -5,7 +5,7 @@
 A really simple, lightweight Angular pipe for converting a date string into a time ago
 
 ## version
-angular 9+
+angular 10+
 
 
 
@@ -55,3 +55,8 @@ _dt = new Date();
 ```
 
 If this value is null or not parsable as a date, then the pipe will display nothing
+
+## Live examples
+GitHub Pages demo: https://ehsanshrz.github.io/persian-time-ago-pipe/
+
+The demo includes multiple examples such as seconds ago, minutes ago, hours ago, days ago, and months ago.
